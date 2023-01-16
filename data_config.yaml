@@ -1,0 +1,259 @@
+HSP90:
+  target_chain: A
+  bindding_chain: [B,X,Y]
+
+DLG4_rat:
+  target_chain: A
+  bindding_chain: [B]
+
+BLAT_ECOLX_Ranganathan2015:
+  target_chain: A
+  bindding_chain: False
+
+BG_STRSQ: 
+  target_chain: A
+  bindding_chain: [B]
+
+Ubiquitin_fitness: 
+  target_chain: B
+  bindding_chain: [A,C]
+
+Ubiquitin_E1:
+  target_chain: B
+  bindding_chain: [A,C]
+
+TPMT_abundance: 
+  target_chain: A
+  bindding_chain: False
+
+gb1: 
+  target_chain: A
+  bindding_chain: False
+gb1_for_train: 
+  target_chain: A
+  bindding_chain: False
+  
+GB1_2combo: 
+  target_chain: C
+  bindding_chain: [A]
+
+GB1_4combo: 
+  target_chain: C
+  bindding_chain: [A]
+
+GB1_for_train: 
+  target_chain: A
+  bindding_chain: False
+
+gb1_4combination: 
+  target_chain: A
+  bindding_chain: False
+
+BLAT_ECOLX_Palzkill2012:
+  target_chain: A
+  bindding_chain: False
+
+TEM:
+  target_chain: A
+  bindding_chain: False
+
+TEM1:
+  target_chain: A
+  bindding_chain: False
+
+YAP1_WW:
+  target_chain: A
+  bindding_chain: [B]
+
+
+YAP1_WW1:
+  target_chain: A
+  bindding_chain: [B]
+
+cov2_ace2_bind:
+  target_chain: E
+  bindding_chain: ['A']
+
+cov2_ace2_expr:
+  target_chain: E
+  bindding_chain: ['A']
+
+BLAT_ECOLX_Tenaillon:
+  target_chain: A
+  bindding_chain: False
+
+
+BLAT_ECOLX_Ostermeier:
+  target_chain: A
+  bindding_chain: False
+
+GAL4:
+  target_chain: A
+  bindding_chain: False
+
+KKA2_KLEPN_KAN18:
+  target_chain: A
+  bindding_chain: False
+
+UBC9_HUMAN:
+  target_chain: A
+  bindding_chain: False
+
+SUMO1_HUMAN:
+  target_chain: A
+  bindding_chain: False
+
+
+CALM1_HUMAN:
+  target_chain: A
+  bindding_chain: False
+
+B3VI55_LIPST:
+  target_chain: A
+  bindding_chain: False    
+
+B3VI55_LIPSTSTABLE:
+  target_chain: A
+  bindding_chain: False
+
+
+MTH3_HAEAESTABILIZED_G17:
+  target_chain: A
+  bindding_chain: [B,Y]
+
+MK01_HUMAN_SCH:
+  target_chain: A
+  bindding_chain: False
+
+MK01_HUMAN_VRT:
+  target_chain: A
+  bindding_chain: False
+
+IF1_ECOLI_rich:
+  target_chain: A
+  bindding_chain: False
+
+
+RASH_HUMAN:
+  target_chain: A
+  bindding_chain: False
+
+BRCA1_HUMAN:
+  target_chain: A
+  bindding_chain: [B]
+
+TIM_SULSO:
+  target_chain: A
+  bindding_chain: False
+
+TPK1_HUMAN:
+  target_chain: A
+  bindding_chain: False
+
+TIM_THEMA:
+  target_chain: A
+  bindding_chain: False
+
+TIM_THETH:
+  target_chain: A
+  bindding_chain: False
+
+PTEN: 
+  target_chain: A
+  bindding_chain: False
+
+AMIE_acet: 
+  target_chain: A
+  bindding_chain: False
+
+Ubiqutin_Fraser2016: 
+  target_chain: B
+  bindding_chain: [A,C]
+
+HIS7_YEAST:
+  target_chain: A
+  bindding_chain: False
+
+UBE4B_MOUSE_Klevit2013:
+  target_chain: A
+  bindding_chain: False
+
+PABP_rrm:
+  target_chain: A
+  bindding_chain: False
+
+PABP_RRM:
+  target_chain: A
+  bindding_chain: False
+
+FOSJUN:
+  target_chain: E
+  bindding_chain: [F,G,H]
+
+FOS_JUN:
+  target_chain: E
+  bindding_chain: [F,G,H]
+
+TDP43:
+  target_chain: A
+  bindding_chain: False
+
+avGFP:
+  target_chain: A
+  bindding_chain: False
+
+AVGFP:
+  target_chain: A
+  bindding_chain: False
+
+
+AVGFP_all:
+  target_chain: A
+  bindding_chain: False
+
+
+cgre_gfp:
+  target_chain: A
+  bindding_chain: False
+
+amac_gfp:
+  target_chain: A
+  bindding_chain: False
+
+pplu_gfp:
+  target_chain: A
+  bindding_chain: False
+
+cgre_GFP:
+  target_chain: A
+  bindding_chain: False
+
+amac_GFP:
+  target_chain: A
+  bindding_chain: False
+
+pplu_GFP:
+  target_chain: A
+  bindding_chain: False
+
+
+BPTI_BT: 
+  target_chain: I
+  bindding_chain: [E]
+
+
+BPTI_CHT: 
+  target_chain: D
+  bindding_chain: [B,C,G,H,I]
+
+BPTI_MT: 
+  target_chain: E
+  bindding_chain: [A]
+
+PARE_PARD: 
+  target_chain: A
+  bindding_chain: [B,C,D]
+
+PhoQ_PhoP:
+  target_chain: A
+  bindding_chain: [B,D]
