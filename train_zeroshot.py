@@ -18,7 +18,7 @@ def main(args):
     all_datasets.extend(dataset_names)
     all_datasets.append(test_dataname)
         
-    test_dfs = pd.read_csv('input_data/{}/{}_rescaled.csv'.format(test_dataname,test_dataname))
+    test_dfs = pd.read_csv('./input_data/{}/{}_rescaled.csv'.format(test_dataname,test_dataname))
     test_dfs['dataset_name'] = test_dataname
     test_df_dict = {test_dataname:test_dfs}
     
@@ -30,7 +30,7 @@ def main(args):
         val_df_dict = {}
         val_dataset_name = dataset_names[fold_idx]
         for dataset_name in dataset_names:
-            dfs = pd.read_csv('input_data/{}/{}_rescaled.csv'.format(dataset_name,dataset_name))
+            dfs = pd.read_csv('./input_data/{}/{}_rescaled.csv'.format(dataset_name,dataset_name))
             dfs['dataset_name'] = dataset_name
             if dataset_name != val_dataset_name:
                 train_df_dict[dataset_name] = dfs
@@ -57,7 +57,7 @@ def main(args):
                 n_ensembles=args.n_ensembles,
                 lr = args.lr,
                 multi_train=args.multi_model,esm_msa_linear_hidden = args.esm_msa_linear_hidden,
-                pdb_path_prefix = '/input_data',)
+                pdb_path_prefix = './input_data',)
         
         gvp_msa.logger.write('fold {}, train&val dataset is {},\nval dataset is {},\ntest dataset is {}\n'.format(
                        fold_idx,','.join(dataset_names),val_dataset_name,test_dataname))

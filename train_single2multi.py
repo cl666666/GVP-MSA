@@ -113,7 +113,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch_size', action='store', type=int, default=50, help='batch size')
 
     parser.add_argument('--output_dir', action='store',default='results/train_single2multi', help='directory to save model, prediction, etc.')
-    parser.add_argument('--save_checkpoint', action='store',type=str2bool, default=True, help='save pytorch model parameters')
+    parser.add_argument('--save_checkpoint', action='store',type=str2bool, default=False, help='save pytorch model parameters')
     parser.add_argument('--save_prediction', action='store',type=str2bool, default=True, help='save prediction')
     args = parser.parse_args()
     main(args)
