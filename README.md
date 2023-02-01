@@ -15,14 +15,14 @@ Only one example dataset TEM1 is provided in this github repository due to the s
 ## Running examples
 
 ### Simple averaging or additive models
-    ```
+    ```bash
     python ./simple_models/addition.py --dataset_name TEM1
     python ./simple_models/average.py --dataset_name TEM1
     ```
 
 ### Train GVP-MSA of a single protein
 
-    ```
+    ```bash
     # split randomly
     python train_single_protein_randomly.py --train_dataset_names TEM1 --n_ensembles 3  
 
@@ -33,13 +33,13 @@ Only one example dataset TEM1 is provided in this github repository due to the s
 
 First, train GVP-MSA in multi-task framework as a reference model. In the multi-task model, the parameters of the bottom model are shared and the parameters of the top model are specific among different proteins.
 
-    ```
+    ```bash
     python train_multi_protein_refmodel.py --train_dataset_names 'B3VI55_LIPSTSTABLE' 'BG_STRSQ' 'PTEN' 'AMIE_acet' 'HSP90' 'KKA2_KLEPN_KAN18'  --n_ensembles 1 --multi_model True 
     ```
 
 Then, model was finetuned by their own fitness data based on the reference multi-protein model.
 
-    ```
+    ```bash
     # split randomly
     python train_finetune_single_protein_randomly.py --train_dataset_names TEM1 --n_ensembles 3  --device "cuda:0" --load_model_path results/multi_protein_refmodel/B3VI55_LIPSTSTABLE~BG_STRSQ~PTEN~AMIE_acet~HSP90~KKA2_KLEPN_KAN18/model_fold0_ensemble0.pt --multi_model False 
 
@@ -48,12 +48,12 @@ Then, model was finetuned by their own fitness data based on the reference multi
     ```
 
 ### Performing zero-shot fitness prediction of novel proteins
-    ```
+    ```bash
     python train_zeroshot.py --train_dataset_names 'B3VI55_LIPSTSTABLE' 'BG_STRSQ' 'PTEN' 'AMIE_acet' 'HSP90' 'KKA2_KLEPN_KAN18' 'GB1_2combo' 'YAP1_WW1' 'AVGFP' 'FOS_JUN' --test_dataset_name 'TEM1'
     ```
 
 ### Predicting higher-order variant effects from single variant effects by training with other DMS datasets with higher-order variant effects.
 
-    ```
+    ```bash
     python train_single2multi.py --train_dataset_names 'GB1_2combo' 'FOS_JUN' 'YAP1_WW1' 'AVGFP' --test_dataset_name 'TEM1'
     ```
