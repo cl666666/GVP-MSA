@@ -10,8 +10,8 @@ Also, esm is required to be installed from its github repository: https://github
 
 ## Data
 Processed protein fitness data and its relevant MSA and protein structure information are available.
-Only one example dataset TEM1 is provided in this github repository due to the size constraints. More datasets can be download from https://www.dropbox.com/s/yrutk32l21y6dhr/directed_evolution_input_datasets.tar.gz?dl=0. To test with these datasets, you need to uncompress the downloaded data and move them into the "input_data" directory.
-
+Only one example dataset TEM1 is provided in this github repository due to the size constraints. More datasets can be downloaded from https://www.dropbox.com/s/yrutk32l21y6dhr/directed_evolution_input_datasets.tar.gz?dl=0. To test with these datasets, you need to uncompress the downloaded data and move them into the "input_data" directory.
+Also, we uploaded our pretrained model parameters for zero-shot prediction, which can be downloaded from https://www.dropbox.com/s/xwrsx8synd8i7cu/zero-shot_parameter.tar.gz?dl=0.
 ## Running examples
 
 ### Simple averaging or additive models
@@ -41,10 +41,13 @@ Then, model was finetuned by their own fitness data based on the reference multi
     # split based on mutation position
     python train_finetune_single_protein_split_basedon_position.py --train_dataset_names TEM1 --n_ensembles 3 --device "cuda:0" --load_model_path results/multi_protein_refmodel/B3VI55_LIPSTSTABLE~BG_STRSQ~PTEN~AMIE_acet~HSP90~KKA2_KLEPN_KAN18/model_fold0_ensemble0.pt --multi_model False
 
-### Performing zero-shot fitness prediction of novel proteins
+### Train and test zero-shot fitness predictors.
 
     python train_zeroshot.py --train_dataset_names 'B3VI55_LIPSTSTABLE' 'BG_STRSQ' 'PTEN' 'AMIE_acet' 'HSP90' 'KKA2_KLEPN_KAN18' 'GB1_2combo' 'YAP1_WW1' 'AVGFP' 'FOS_JUN' --test_dataset_name 'TEM1'
 
 ### Predicting higher-order variant effects from single variant effects by training with other DMS datasets with higher-order variant effects.
 
     python train_single2multi.py --train_dataset_names 'GB1_2combo' 'FOS_JUN' 'YAP1_WW1' 'AVGFP' --test_dataset_name 'TEM1'
+### Performing zero-shot fitness prediction for novel proteins
+We provided trained model parameters for zero-shot prediction. You can download the parameters from the above url and uncompress it. To predict it on a your own dataset, there required will-orgainized files including the mutation-fitness information (.csv file), MSA information (.a2m file), protein struction information (.pdb file), and the wild-type sequence information (.fasta file). Run:
+    python inference.py --load_model_path zero-shot_parameter --test_dataset_name NEW_DATASET_NAME
