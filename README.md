@@ -50,4 +50,5 @@ Then, model was finetuned by their own fitness data based on the reference multi
     python train_single2multi.py --train_dataset_names 'GB1_2combo' 'FOS_JUN' 'YAP1_WW1' 'AVGFP' --test_dataset_name 'TEM1'
 ### Performing zero-shot fitness prediction for novel proteins
 We provided trained model parameters for zero-shot prediction. You can download the parameters from the above url and uncompress it. To predict it on a your own dataset, there required will-orgainized files including the mutation-fitness information (.csv file), MSA information (.a2m file), protein struction information (.pdb file), and the wild-type sequence information (.fasta file). Run:
+
     python inference.py --load_model_path zero-shot_parameter --test_dataset_name NEW_DATASET_NAME
