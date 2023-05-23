@@ -24,9 +24,15 @@ def spearman(y_pred, y_true):
     return spearmanr(y_pred, y_true).correlation
 
 
-def ndcg(y_pred, y_true):
+def ndcg_old(y_pred, y_true):
     y_true_normalized = (y_true - y_true.mean()) / (y_true.std()+0.0000001)
     return ndcg_score(y_true_normalized.reshape(1, -1), y_pred.reshape(1, -1))
+def ndcg(y_pred, y_true):
+    min_ytrue = np.min(y_true)
+    if min_ytrue <0:
+        y_true = y_true + abs(min_ytrue)
+    k = math.floor(len(y_true)*0.01)
+    return ndcg_score(y_true.reshape(1, -1), y_pred.reshape(1, -1),k=k)
 
 def aucroc(y_pred, y_true, y_cutoff):
     y_true_bin = (y_true >= y_cutoff)
