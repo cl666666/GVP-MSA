@@ -10,8 +10,8 @@ Also, esm is required to be installed from its github repository: https://github
 
 ## Data
 Processed protein fitness data and its relevant MSA and protein structure information are available.
-Only one example dataset TEM1 is provided in this github repository due to the size constraints. More datasets can be downloaded from https://www.dropbox.com/s/yrutk32l21y6dhr/directed_evolution_input_datasets.tar.gz?dl=0. To test with these datasets, you need to uncompress the downloaded data and move them into the "input_data" directory.
-Also, we uploaded our pretrained model parameters for zero-shot prediction, which can be downloaded from https://www.dropbox.com/s/xwrsx8synd8i7cu/zero-shot_parameter.tar.gz?dl=0.
+Only one example dataset TEM1 is provided in this github repository due to the size constraints. More DMS datasets can be downloaded from Zenodo: https://doi.org/10.5281/zenodo.8103840. To test with these datasets, you need to uncompress the downloaded data file "directed_evolution_input_datasets.tar.gz" and move them into the "input_data" directory.
+Also, we uploaded our pretrained model parameters for zero-shot prediction, which can be also downloaded from Zenodo: https://doi.org/10.5281/zenodo.8103840.
 ## Running examples
 
 ### Simple averaging or additive models
