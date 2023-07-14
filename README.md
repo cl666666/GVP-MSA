@@ -1,6 +1,10 @@
 # GVP-MSA
 Learning protein fitness landscapes with deep mutational scanning data from multiple sources.
 
+
+[![DOI](https://zenodo.org/badge/589625078.svg)](https://zenodo.org/badge/latestdoi/589625078)
+
+
 ## Overview
 GVP-MSA is a deep learning model to learn the fitness landscapes, in which a 3D equivariant graph neural network GVP was used to extract features from protein structure, and a pre-trained model MSA Transformer was applied to embed MSA constraints. We describe a multi-protein training scheme to leverage the existing deep mutational scanning data from different proteins to help reason about the fitness landscape of a novel protein. Proof-of-concept trials are designed to validate this training scheme in three aspects: random and positional extrapolation for single variant effects, making zero-shot fitness predictions for novel proteins, and predicting higher-order variant effects from single variant effects. Our study also identified previously overlooked strong baselines, including a position specific averaging model for predicting single variant effects, and an additive model for predicting higher-order effects. 
 
